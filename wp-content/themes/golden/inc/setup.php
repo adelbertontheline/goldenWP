@@ -36,9 +36,17 @@ function golden_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
+	/*register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'golden' ),
-	) );
+	) );*/
+
+	function my_theme_setup() {
+		add_theme_support('menus');
+		register_nav_menu('primaryMenu', 'Primary Menu Links');
+		register_nav_menu('footerMenu', 'Footer Menu Links');
+	}
+
+	add_action('init', 'my_theme_setup');
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
