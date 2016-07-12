@@ -33,7 +33,14 @@ function golden_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function post_thumbnail_setup() {
+		add_theme_support('post-thumbnails');
+		add_image_size('small-thumbnail', 291, 301, true);
+		// add_image_size('banner-thumbnail', 920, 250, true);
+	}
+
+	add_action('after_setup_theme', 'post_thumbnail_setup');
+	// add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	/*register_nav_menus( array(

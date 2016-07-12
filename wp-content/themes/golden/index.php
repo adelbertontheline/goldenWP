@@ -16,31 +16,15 @@
 
 			<section class="stage">
 				<div class="stage-content">
-					<div class="site-nav">
+					<div class="site-header">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-2">
-									<a href=""><img class="site-logo center-block" src="img/myLogo.png" alt=""></a>
+									<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
 								</div>
 								<div class="col-md-10">
-									<nav>
-										<ul class="menu">
-											<li class="menu__item">
-												<a href="">Home</a>
-											</li>
-											<li class="menu__item">
-												<a href="">Services</a>
-											</li>
-											<li class="menu__item">
-												<a href="">Portfolio</a>
-											</li>
-											<li class="menu__item">
-												<a href="">About</a>
-											</li>
-											<li class="menu__item">
-												<a href="">Contact</a>
-											</li>
-										</ul>
+									<nav class="site-nav">
+										<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
 									</nav>
 								</div>
 							</div>
@@ -71,17 +55,17 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/icon-basket.png" alt="">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/icon-basket.png" alt="">
 									<h5>E-Commerce</h5>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus asperiores eius facere saepe sint quasi dicta, rem iste quaerat fugiat consequatur possimus accusamus, est veritatis, esse? Consequatur ullam consequuntur, laborum.</p>
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/icon-laptop.png" alt="">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/icon-laptop.png" alt="">
 									<h5>Responsive Web</h5>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus asperiores eius facere saepe sint quasi dicta, rem iste quaerat fugiat consequatur possimus accusamus, est veritatis, esse? Consequatur ullam consequuntur, laborum.</p>
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/icon-locked.png" alt="">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/icon-locked.png" alt="">
 									<h5>Web Security</h5>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus asperiores eius facere saepe sint quasi dicta, rem iste quaerat fugiat consequatur possimus accusamus, est veritatis, esse? Consequatur ullam consequuntur, laborum.</p>
 								</div>
@@ -99,88 +83,58 @@
 					</div>
 					<div style="margin-top: 2rem">
 						<div class="container">
-							<!-- <div class="row">
-								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img src="img/p1.png" alt="">
-									<div style="background-color: white; width: 289px">
-										<br>
-										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
-										<p class="portfolio__desc"><em>Branding</em></p>
-										<br>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img src="img/p2.png" alt="">
-									<div style="background-color: white; width: 291px">
-										<br>
-										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
-										<p class="portfolio__desc"><em>Branding</em></p>
-										<br>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img src="img/p3.png" alt="">
-									<div style="background-color: white; width: 291px">
-										<br>
-										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
-										<p class="portfolio__desc"><em>Branding</em></p>
-										<br>
-									</div>
-								</div>
-							</div> -->
-
 							<ul class="flex">
 								<li class="flex__item">
-									<img src="img/p1.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p1.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
-										<p class="portfolio__desc"><em>Branding</em></p>
+										<h5 class="portfolio__item--desc">Ebony &amp; Ivory</h5>
+										<p class="portfolio__item--desc"><em>Branding</em></p>
 										<br>
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="img/p2.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p2.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Smart Stationary</h5>
-										<p class="portfolio__desc"><em>Print Design</em></p>
+										<h5 class="portfolio__item--desc">Smart Stationary</h5>
+										<p class="portfolio__item--desc"><em>Print Design</em></p>
 										<br>
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="img/p3.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p3.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Clever Poster</h5>
-										<p class="portfolio__desc"><em>Print Design</em></p>
+										<h5 class="portfolio__item--desc">Clever Poster</h5>
+										<p class="portfolio__item--desc"><em>Print Design</em></p>
 										<br>
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="img/p4.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p4.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Vinyl Record</h5>
-										<p class="portfolio__desc"><em>Product Mock-Up</em></p>
+										<h5 class="portfolio__item--desc">Vinyl Record</h5>
+										<p class="portfolio__item--desc"><em>Product Mock-Up</em></p>
 										<br>
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="img/p5.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p5.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Treehouse Template</h5>
-										<p class="portfolio__desc"><em>Web Design</em></p>
+										<h5 class="portfolio__item--desc">Treehouse Template</h5>
+										<p class="portfolio__item--desc"><em>Web Design</em></p>
 										<br>
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="img/p6.png" alt="">
+									<img src="<?php bloginfo('template_directory'); ?>/img/p6.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__desc">Burned Logo</h5>
-										<p class="portfolio__desc"><em>Branding</em></p>
+										<h5 class="portfolio__item--desc">Burned Logo</h5>
+										<p class="portfolio__item--desc"><em>Branding</em></p>
 										<br>
 									</div>
 								</li>
@@ -209,12 +163,12 @@
 									</p>
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/about1.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about1.png">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/about2.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about2.png">
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: left">
 									<h5>JANUARY 2011</h5>
@@ -241,12 +195,12 @@
 									</p>
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/about3.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about3.png">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/about4.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about4.png">
 								</div>
 								<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: left">
 									<h5>FEBRUARY 2014</h5>
@@ -262,7 +216,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12 col-sm-12 col-xs-12">
-									<img class="center-block icons" src="img/about5.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about5.png">
 								</div>
 							</div>
 						</div>
@@ -280,52 +234,52 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-4">
-									<img class="center-block icons" src="img/about1.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about1.png">
 									<h5>Kimberly Thompson</h5>
 									<p>Marketer</p>
 									<div class="social">
 										<ul class="menu menu--social">
 											<li class="menu__item menu__item--social">
-												<a href=""><img src="img/facebook.png"></a>
+												<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
 											</li>
 											<li class="menu__item menu__item--social">
-												<a href=""><img src="img/twitter.png"></a>
+												<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
 											</li>
 											<li class="menu__item menu__item--social">
-												<a href=""><img src="img/pinterest.png"></a>
+												<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/pinterest.png"></a>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<div class="col-md-4">
-									<img class="center-block icons" src="img/about2.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about2.png">
 									<h5>Rico Massimo</h5>
 									<p>Coder</p>
 									<ul class="menu menu--social">
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/facebook.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
 										</li>
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/twitter.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
 										</li>
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/pinterest.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/pinterest.png"></a>
 										</li>
 									</ul>
 								</div>
 								<div class="col-md-4">
-									<img class="center-block icons" src="img/about3.png">
+									<img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/about3.png">
 									<h5>Uko Mason</h5>
 									<p>Graphic Designer</p>
 									<ul class="menu menu--social">
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/facebook.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
 										</li>
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/twitter.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
 										</li>
 										<li class="menu__item menu__item--social">
-											<a href=""><img src="img/pinterest.png"></a>
+											<a href=""><img src="<?php bloginfo('template_directory'); ?>/img/pinterest.png"></a>
 										</li>
 									</ul>
 								</div>
@@ -335,43 +289,5 @@
 				</div>
 			</section>
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-
-			<?php
-			if ( have_posts() ) :
-
-				if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-
-				<?php
-				endif;
-
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-
-				endwhile;
-
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-
-			</main><!-- #main -->
-		</div><!-- #primary -->
-
-	<?php
-	get_sidebar();
-	get_footer();
+	<?php 
+	get_footer(); ?>

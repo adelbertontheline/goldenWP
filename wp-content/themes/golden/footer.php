@@ -8,9 +8,10 @@
  *
  * @package Golden_Theme
  */
+?>
 
-	?>
-
+	
+	
 		</main> <!-- end of main-content -->
 
 		<footer cclass="site-footer">

@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -113,7 +113,7 @@ dfn {
 
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
+	/* margin: 0.67em 0; */
 }
 
 mark {
@@ -228,11 +228,11 @@ input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
-fieldset {
+/*fieldset {
 	border: 1px solid #c0c0c0;
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
-}
+}*/
 
 legend {
 	border: 0;
@@ -261,10 +261,7 @@ th {
 # Typography
 --------------------------------------------------------------*/
 body,
-button,
-input,
-select,
-textarea {
+select {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
@@ -413,7 +410,7 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
+/*button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -497,7 +494,7 @@ textarea:focus {
 
 textarea {
 	width: 100%;
-}
+}*/
 
 /*--------------------------------------------------------------
 # Navigation
@@ -912,11 +909,9 @@ object {
 
 
 
-/*
-
-My Custom CSS
-
-*/
+/****************************
+* My Custom CSS
+****************************/
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -925,6 +920,7 @@ body {
 h1, h2, p, a {
 	font-weight: 300;
 }
+
 
 
 
@@ -939,29 +935,18 @@ h1, h2, p, a {
 
 
 
-.menu {
+.site-nav ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.menu--social {
-	display: table;
-	margin: auto;
-}
-
-.menu__item {
+.site-nav li {
 	display: inline-block;
 	float: left;
 }
 
-.menu__item--social {
-	margin-left: 5px;
-	margin-right: 5px;
-	display: table-cell;
-}
-
-.menu__item a {
+.site-nav a {
 	color: white;
 	display: block;
 	font-size: 14px;
@@ -974,21 +959,49 @@ h1, h2, p, a {
 	letter-spacing: 2px;
 }
 
-.menu__item--social a {
-	padding: 0;
+.site-nav a:hover {
+	color: rgba(255, 255, 255, 0.6);
+	border-bottom: 1px solid white;
 }
 
-.menu__item a:hover {
-	background: rgba(0,0,153,0.7);
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu__item {
+	display: inline-block;
+	float: left;
+}
+
+.menu--social {
+	display: table;
+	margin: auto;
+}
+
+.menu__item--social {
+	margin-left: 5px;
+	margin-right: 5px;
+	display: table-cell;
+}
+
+.menu__item--social a {
+	padding: 0;
 }
 
 .menu__item--social a:hover {
 	background: none;
 }
 
-.site-nav nav {
+.site-nav {
 	float: right;
 }
+
+.current_page_item a {
+	border-bottom: 1px solid white;
+}
+
 
 
 
@@ -1077,15 +1090,13 @@ h1, h2, p, a {
 
 
 
+
 .portfolio {
 	background: #f7f7f7;
 }
 
-.desc-container {
 
-}
-
-.portfolio__desc {
+.portfolio__item--desc {
 	text-align: center;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;

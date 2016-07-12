@@ -26,7 +26,7 @@
 add_action( 'wp_enqueue_scripts', 'golden_scripts' );*/
 
 
-
+show_admin_bar(false);
 
 /**
 * Theme setup
