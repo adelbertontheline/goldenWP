@@ -921,6 +921,9 @@ h1, h2, p, a {
 	font-weight: 300;
 }
 
+h1 {
+	font-size: 40px;
+}
 
 
 
@@ -1096,10 +1099,18 @@ h1, h2, p, a {
 }
 
 
-.portfolio__item--desc {
+.portfolio__desc {
 	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
+}
+
+.portfolio__desc--timestamp {
+	font-size: 12px;
+	color: gray;
 }
 
 .flex {
@@ -1115,6 +1126,39 @@ h1, h2, p, a {
 .flex__item {
 	margin-top: 3rem;
 }
+
+.post-aside {
+	background: url('img/aside.png') no-repeat;
+	width: 291px;
+	height: 301px;
+	position: relative;
+}
+
+.post-aside p {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 2rem 2rem;
+}
+
+.post-link {
+	background: url('img/link.png') no-repeat;
+	width: 291px;
+	height: 301px;
+	text-align: center;
+	position: relative;
+}
+
+.post-link p {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 2rem 2rem;
+	left: 0;
+	width: 100%;
+}
+
+
 
 
 
@@ -1148,3 +1192,193 @@ h1, h2, p, a {
 
 
 
+
+/**********************************
+* Footer Logos Section Style
+**********************************/
+
+.footer-logos .flex__item {
+	margin-top: 1rem;
+}
+
+.footer-logos .section-content {
+	padding: 3rem 0 4rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**********************************
+* HTML Pages Style
+**********************************/
+
+/**********************************
+* Services Page Style
+**********************************/
+
+.services-page__head {
+	background: url('img/request.jpeg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.services-page {
+	background-color: #f2f2f2;
+}
+
+.services-page__tagline {
+	color: #595959;
+}
+
+.services-page .flex__item {
+	width: auto;
+	width: 350px;
+	height: 300px;
+	background-color: tomato;
+	color: white;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: space-around;
+  	overflow: auto;
+  	margin-top: 3rem;
+  	padding: 1%;
+  	line-height: 1.3;
+  	text-align: center;
+}
+
+.services-page .flex__item a {
+	text-decoration: none;
+	color: white;
+}
+
+.services-page .flex__item a:hover {
+	color: blue;
+}
+
+.request-bg	{
+	background: url('img/computer.jpg') no-repeat;
+	background-size: cover;
+	background-position: top center;
+	padding: 0;
+}
+
+.request-bg__text-container {
+	background-color: rgba(0,0,0,0.6);
+	padding: 5rem 3rem;
+	color: white;
+}
+
+
+
+
+
+/**********************************
+* About Page Style
+**********************************/
+
+.about-page__head {
+	height: auto;
+	width: 100%;
+}
+
+.section-subtitle--about-page {
+	font-family: 'Times New Roman';
+	font-size: 60px;
+}
+
+.content-title {
+	color: #f26f70;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 10px;
+	font-weight: bold;
+	margin-bottom: 1%;
+}
+
+.content-paragraph {
+	font-family: 'Times New Roman';
+	font-size: 24px;
+}
+
+.core-values__item {
+	font-size: 80px;
+	color: #262626;
+	text-align: center;
+	font-family: 'Lato';
+	font-weight: 300;
+}
+
+.content-paragraph--core {
+	color: gray;
+	text-align: center;
+	font-style: italic;
+}
+
+.booking-bg {
+	background: url('img/office.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 0;
+}
+
+.booking-bg__text-container {
+	background-color: rgba(0,0,0,0.6);
+	padding: 5rem 3rem;
+	color: white;
+}
+
+
+
+
+/**********************************
+* Contact Page Style
+**********************************/
+
+.contact-page {
+	background-color: #f2f2f2;
+	background: url('img/cityscape.jpg') no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.contact-work {
+	padding: 5rem;
+  	background: rgba(0, 188, 212, 0.6);
+	text-align: center;
+	color: white;
+}
+
+.contact-play {
+	padding: 5rem;
+  	background: rgba(213, 93, 173, 0.6);
+  	text-align: center;
+  	color: white;
+}
+
+.phone-num {
+	margin-top: 4rem;
+	text-align: center;
+	color: white;
+	font-family: 'Verdana';
+}
+
+.contact-page__address {
+	color: white;
+	text-align: center;
+}
+
+.contact-page a {
+	color: white;
+	text-decoration: none;
+}
+
+.contact-page .section-subtitle {
+	color: black;
+}

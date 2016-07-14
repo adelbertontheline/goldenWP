@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying results in search pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -26,7 +26,9 @@
 else { ?>
 	<li class="flex__item">
 		<a href="<?php the_permalink(); ?>">
-			<img src="<?php bloginfo('template_directory'); ?>/img/default.png">
+			<div class="post-aside">
+				<?php the_excerpt(); ?>
+			</div>
 		</a>
 		<div style="background-color: white; width: 291px; padding: 0 1rem">
 			<br>

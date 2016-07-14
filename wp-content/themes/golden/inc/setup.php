@@ -35,12 +35,14 @@ function golden_setup() {
 	 */
 	function post_thumbnail_setup() {
 		add_theme_support('post-thumbnails');
-		add_image_size('small-thumbnail', 291, 301, true);
+		add_image_size('portfolio-thumbnail', 291, 301, true);
 		// add_image_size('banner-thumbnail', 920, 250, true);
 	}
 
-	add_action('after_setup_theme', 'post_thumbnail_setup');
+	add_action('init', 'post_thumbnail_setup');
 	// add_theme_support( 'post-thumbnails' );
+
+	add_theme_support('post-formats', array('aside', 'image', 'video', 'gallery', 'link'));
 
 	// This theme uses wp_nav_menu() in one location.
 	/*register_nav_menus( array(
@@ -54,6 +56,12 @@ function golden_setup() {
 	}
 
 	add_action('init', 'my_theme_setup');
+
+	function my_excerpt_length() {
+		return 25;
+	}
+
+	add_filter('excerpt_length', 'my_excerpt_length');
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

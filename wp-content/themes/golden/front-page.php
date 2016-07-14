@@ -88,8 +88,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p1.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Ebony &amp; Ivory</h5>
-										<p class="portfolio__item--desc"><em>Branding</em></p>
+										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
+										<p class="portfolio__desc"><em>Branding</em></p>
 										<br>
 									</div>
 								</li>
@@ -97,8 +97,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p2.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Smart Stationary</h5>
-										<p class="portfolio__item--desc"><em>Print Design</em></p>
+										<h5 class="portfolio__desc">Smart Stationary</h5>
+										<p class="portfolio__desc"><em>Print Design</em></p>
 										<br>
 									</div>
 								</li>
@@ -106,8 +106,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p3.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Clever Poster</h5>
-										<p class="portfolio__item--desc"><em>Print Design</em></p>
+										<h5 class="portfolio__desc">Clever Poster</h5>
+										<p class="portfolio__desc"><em>Print Design</em></p>
 										<br>
 									</div>
 								</li>
@@ -115,8 +115,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p4.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Vinyl Record</h5>
-										<p class="portfolio__item--desc"><em>Product Mock-Up</em></p>
+										<h5 class="portfolio__desc">Vinyl Record</h5>
+										<p class="portfolio__desc"><em>Product Mock-Up</em></p>
 										<br>
 									</div>
 								</li>
@@ -124,8 +124,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p5.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Treehouse Template</h5>
-										<p class="portfolio__item--desc"><em>Web Design</em></p>
+										<h5 class="portfolio__desc">Treehouse Template</h5>
+										<p class="portfolio__desc"><em>Web Design</em></p>
 										<br>
 									</div>
 								</li>
@@ -133,8 +133,8 @@
 									<img src="<?php bloginfo('template_directory'); ?>/img/p6.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
-										<h5 class="portfolio__item--desc">Burned Logo</h5>
-										<p class="portfolio__item--desc"><em>Branding</em></p>
+										<h5 class="portfolio__desc">Burned Logo</h5>
+										<p class="portfolio__desc"><em>Branding</em></p>
 										<br>
 									</div>
 								</li>

@@ -18,20 +18,20 @@
 			<section class="footer-logos">
 				<div class="section-content">
 					<div class="container">
-						<div class="row">
-							<div class="col-md-3 col-sm-6 col-xs-12">
+						<ul class="flex">
+							<li class="flex__item">
 								<a href=""><img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/envato.png" alt=""></a>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12">
+							</li>
+							<li class="flex__item">
 								<a href=""><img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/wordpress.png" alt=""></a>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12">
+							</li>
+							<li class="flex__item">
 								<a href=""><img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/tutsplus.png" alt=""></a>
-							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12">
+							</li>
+							<li class="flex__item">
 								<a href=""><img class="center-block icons" src="<?php bloginfo('template_directory'); ?>/img/microlancer.png" alt=""></a>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section> <!-- end of footer-logos -->
