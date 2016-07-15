@@ -932,6 +932,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	padding: 5px 0px;
+	display: inline-block;
 }
 
 
@@ -1003,6 +1004,57 @@ h1 {
 
 .current_page_item a {
 	border-bottom: 1px solid white;
+}
+
+
+
+
+
+#site-nav-mobile {
+	display: none;
+}
+
+#site-nav-mobile ul {
+	list-style: none;
+	background: rgba(0,0,0, 0.5);
+}
+
+#ite-nav-mobile li {
+	clear: both;
+	display: block;
+}
+
+#site-nav-mobile a {
+	color: white;
+	display: block;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 12px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	letter-spacing: 2px;
+}
+
+#site-nav-mobile a:hover {
+	background: rgba(0,0,153,0.4);
+}
+
+#site-nav-mobile .current_page_item a {
+	color: gray;
+	border: none;
+}
+
+#btn-nav-mobile {
+	border: none;
+	float: right; padding: 0;
+	line-height: 0;
+	background: transparent;
+	visibility: hidden;
+}
+
+.show-mobile {
+	visibility: visible;
 }
 
 
@@ -1157,6 +1209,7 @@ h1 {
 	left: 0;
 	width: 100%;
 }
+
 
 
 
@@ -1381,4 +1434,82 @@ h1 {
 
 .contact-page .section-subtitle {
 	color: black;
+}
+
+
+
+
+
+
+
+
+/**********************************
+* Contact Page Style
+**********************************/
+
+.error-page {
+	background: #f2f2f2;
+	height: auto;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.error-page .section-content {
+	width: 100%;
+}
+
+.xl-text {
+	font-size: 25vw;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************
+* Media Queries
+**********************************/
+
+@media (max-width: 500px) {
+	.core-values__item {
+		font-size: 15vw;
+	}
+}
+
+@media (max-width: 580px) {
+	#site-nav-desktop {
+		display: none;
+	}
+
+	#btn-nav-mobile {
+		visibility: visible;
+	}
+}
+
+@media (min-width: 581px) {
+	#site-nav-mobile ul {
+		visibility: hidden;
+		display: none;
+	}
 }

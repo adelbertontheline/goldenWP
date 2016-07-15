@@ -36,7 +36,7 @@ function golden_setup() {
 	function post_thumbnail_setup() {
 		add_theme_support('post-thumbnails');
 		add_image_size('portfolio-thumbnail', 291, 301, true);
-		// add_image_size('banner-thumbnail', 920, 250, true);
+		// add_image_size('banner-thumbnail', '100%', '100%', true);
 	}
 
 	add_action('init', 'post_thumbnail_setup');

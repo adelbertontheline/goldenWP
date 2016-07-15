@@ -21,9 +21,13 @@
 							<div class="row">
 								<div class="col-md-2">
 									<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
+									<button class="btn btn-info-outline" id="btn-nav-mobile"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
 								</div>
 								<div class="col-md-10">
-									<nav class="site-nav">
+									<nav class="site-nav" id="site-nav-desktop">
+										<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+									</nav>
+									<nav id="site-nav-mobile">
 										<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
 									</nav>
 								</div>
@@ -84,8 +88,8 @@
 					<div style="margin-top: 2rem">
 						<div class="container">
 							<ul class="flex">
-								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p1.png" alt="">
+								<!-- <li class="flex__item">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p1.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Ebony &amp; Ivory</h5>
@@ -94,7 +98,7 @@
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p2.png" alt="">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p2.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Smart Stationary</h5>
@@ -103,7 +107,7 @@
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p3.png" alt="">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p3.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Clever Poster</h5>
@@ -112,7 +116,7 @@
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p4.png" alt="">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p4.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Vinyl Record</h5>
@@ -121,7 +125,7 @@
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p5.png" alt="">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p5.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Treehouse Template</h5>
@@ -130,14 +134,23 @@
 									</div>
 								</li>
 								<li class="flex__item">
-									<img src="<?php bloginfo('template_directory'); ?>/img/p6.png" alt="">
+									<img src="<?php //bloginfo('template_directory'); ?>/img/p6.png" alt="">
 									<div style="background-color: white; width: 291px">
 										<br>
 										<h5 class="portfolio__desc">Burned Logo</h5>
 										<p class="portfolio__desc"><em>Branding</em></p>
 										<br>
 									</div>
-								</li>
+								</li> -->
+								<?php 
+									$customPost = new WP_Query('cat=3&posts_per_page=6');
+									if ($customPost->have_posts()) {
+										while ($customPost->have_posts()) {
+											$customPost->the_post();
+											get_template_part('template-parts/content', get_post_format());
+										}
+									}
+								?>
 							</ul>
 						</div>
 					</div>

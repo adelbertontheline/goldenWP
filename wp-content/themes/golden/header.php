@@ -23,3 +23,23 @@
 <body <?php body_class(); ?>>
 	<div class="all-site">
 		<main class="main-content">
+			<?php 
+				if (is_single()) { ?>
+					<header style="background: #13133a">
+						<div class="stage-content">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-2">
+										<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
+									</div>
+									<div class="col-md-10">
+										<nav class="site-nav">
+											<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+				<?php }
+			?>

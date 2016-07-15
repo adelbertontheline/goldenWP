@@ -40,7 +40,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12">
-									<ul class="flex">
+									
 										<!-- <li class="flex__item">
 											<img src="<?php //bloginfo('template_directory'); ?>/img/p1.png" alt="">
 											<div style="background-color: white; width: 291px">
@@ -96,14 +96,23 @@
 											</div>
 										</li> -->
 										<?php 
-											if (have_posts()) {
-												while (have_posts()) {
+											if (have_posts()) { ?>
+												<ul class="flex">
+												<?php while (have_posts()) {
 													the_post();
 													get_template_part('template-parts/content', get_post_format());
-												}
-											}
+												} ?>
+												</ul>
+												<div style="margin-top: 5rem">
+													<div class="col-xs-6" style="text-align: right">
+														<?php previous_posts_link('&larr; PREV'); ?>
+													</div>
+													<div class="col-xs-6" style="text-align: left">
+														<?php next_posts_link('NEXT &rarr;'); ?>
+													</div>
+												</div>
+											<?php }
 										?>
-									</ul>
 								</div>
 							</div>
 						</div>
