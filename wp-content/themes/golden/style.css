@@ -1016,7 +1016,6 @@ h1 {
 
 #site-nav-mobile ul {
 	list-style: none;
-	background: rgba(0,0,0, 0.5);
 }
 
 #ite-nav-mobile li {
@@ -1034,6 +1033,7 @@ h1 {
 	text-transform: uppercase;
 	font-family: 'Montserrat';
 	letter-spacing: 2px;
+	text-align: center;
 }
 
 #site-nav-mobile a:hover {
@@ -1188,8 +1188,8 @@ h1 {
 
 .post-aside p {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 0;
+	transform: translateY(15%);
 	padding: 2rem 2rem;
 }
 
@@ -1502,8 +1502,21 @@ h1 {
 		display: none;
 	}
 
+	.home-nav-desktop {
+		display: none;
+	}
+
 	#btn-nav-mobile {
 		visibility: visible;
+	}
+
+	#site-nav-mobile ul {
+		margin-top: 1rem;
+	}
+
+	.site-header .stage-content {
+		padding: 1rem 0;
+		text-align: left;
 	}
 }
 
@@ -1511,5 +1524,22 @@ h1 {
 	#site-nav-mobile ul {
 		visibility: hidden;
 		display: none;
+	}
+
+	.home-nav-mobile {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	nav.site-nav {
+		width: 100%;
+	}
+
+	.site-nav ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }

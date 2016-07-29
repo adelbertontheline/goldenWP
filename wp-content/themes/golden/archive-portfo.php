@@ -40,7 +40,10 @@
 				<div class="section-content">
 					<div class="container">
 						<?php
-							if (have_posts()) { ?>
+							$args = array('post_type' => 'portfolio', 'post_per_page' => 3);
+							$loop = new WP_Query($args);
+
+							if ($loop->have_posts()) { ?>
 
 								<h1>
 									<?php
@@ -55,13 +58,13 @@
 									elseif (is_year())
 										echo 'Year: ' . get_the_date('Y');
 									else
-										echo 'Archive';
+										echo 'Archive: ' . 'Portfolio';
 									?>
 								</h1>
 								<hr>
 								<ul class="flex">
-									<?php while (have_posts()) {
-										the_post();
+									<?php while ($loop->have_posts()) {
+										$loop->the_post();
 										get_template_part('template-parts/content', get_post_format());	
 									} ?>
 								</ul>
@@ -81,6 +84,8 @@
 				</div>
 			</section>
 
-		
 
+
+		
+	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>

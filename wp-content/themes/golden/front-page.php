@@ -14,13 +14,13 @@
 
 	get_header(); ?>
 
-			<section class="stage">
-				<div class="stage-content">
-					<div class="site-header">
+			<header class="home-nav-mobile" style="background: #303033; text-align: center">
+				<div class="site-header">
+					<div class="stage-content">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-2">
-									<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
+									<a href="http://localhost/Golden/"><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
 									<button class="btn btn-info-outline" id="btn-nav-mobile"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
 								</div>
 								<div class="col-md-10">
@@ -33,8 +33,35 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- end of site-nav -->
+					</div>
+				</div> <!-- end of site-nav -->
+			</header>
 
+			<section class="stage">
+				<header class="home-nav-desktop" style="text-align: center">
+					<div class="site-header">
+						<div class="stage-content">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-2">
+										<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
+										<button class="btn btn-info-outline" id="btn-nav-mobile"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
+									</div>
+									<div class="col-md-10">
+										<nav class="site-nav" id="site-nav-desktop">
+											<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+										</nav>
+										<nav id="site-nav-mobile">
+											<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- end of site-nav -->
+				</header>
+
+				<div class="stage-content">
 					<div class="stage-titles">
 						<div class="container">
 							<h3 class="tagline">Welcome to our Studio!</h3>

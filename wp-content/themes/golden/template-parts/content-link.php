@@ -17,7 +17,7 @@
 		<div style="background-color: white; width: 291px; padding: 0 1rem">
 			<br>
 			<h5 class="portfolio__desc"><span class="glyphicon glyphicon-link" style="font-size: 16px"></span> <?php the_title(); ?></h5>
-			<hr style="margin: 10px">
+			<hr style="margin: 5px">
 			<p class="portfolio__desc portfolio__desc--timestamp"><?php the_time('M d, Y'); ?> | <?php the_time('h:i A'); ?></p>
 			<br>
 		</div>

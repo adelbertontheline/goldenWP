@@ -114,4 +114,50 @@ function golden_widgets_init() {
 }
 add_action( 'widgets_init', 'golden_widgets_init' );
 
+
+
+
+function my_custom_post_type() {
+	$labels = array (
+		'name' => 'Portfo',
+		'singula_name' => 'Portfo',
+		'add_new' => 'Add Portfo',
+		'all_items' => 'All Items',
+		'add_new_item' => 'Add Item',
+		'edit_item' => 'Edit Item',
+		'new_item' => 'New Item',
+		'view_item' => 'View Item',
+		'search_item' => 'Search Portfo',
+		'not_found' => 'No items found',
+		'not_found_in_trash' => 'No items found in trash',
+		'parent_item_colon' => 'Parent Item'
+	);
+
+	$args = array (
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true,
+		'public_queryable' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'supports' => array (
+			'title',
+			'excerpt',
+			'editor',
+			'thumbnail',
+			'revisions',
+		),
+			'taxonomies' => array ('category', 'post_tag'),
+			'menu_position' => 5,
+			'exclude_from_search' => false
+	);
+	register_post_type('portfo', $args);
+}
+
+add_action('init', 'my_custom_post_type');
+
+
+
 ?>

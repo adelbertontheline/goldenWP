@@ -9,21 +9,27 @@
 
 	get_header(); ?>
 
-			<header style="background: #004d4d">
-				<div class="stage-content">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-2">
-								<a href=""><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
-							</div>
-							<div class="col-md-10">
-								<nav class="site-nav">
-									<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
-								</nav>
+			<header style="background: #004d4d; text-align: center">
+				<div class="site-header">
+					<div class="stage-content">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2">
+									<a href="http://localhost/Golden/"><img class="site-logo center-block" src="<?php bloginfo('template_directory'); ?>/img/myLogo.png" alt=""></a>
+									<button class="btn btn-info-outline" id="btn-nav-mobile"><span class="glyphicon glyphicon-align-justify" style="font-size: 28px"></span></button>
+								</div>
+								<div class="col-md-10">
+									<nav class="site-nav" id="site-nav-desktop">
+										<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+									</nav>
+									<nav id="site-nav-mobile">
+										<?php wp_nav_menu(array('theme_location' => 'primaryMenu')); ?>
+									</nav>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- end of site-nav -->
 			</header>
 
 
